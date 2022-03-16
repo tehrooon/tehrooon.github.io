@@ -46,4 +46,15 @@ p {
 
 a {
 	background-color: #151B25;
+	text-decoration: none;
+	color: white;
+	display: block;
+	position: absolute;
+	bottom: 3vh;	
+	left: 50%;
+	margin: auto;
+	width: 80%;
+	padding: 3vh 3vw;
+	transform: translate(-50%);
+
 }
