@@ -57,3 +57,8 @@ a {
 	padding: 3vh 3vw;
 	transform: translate(-50%);
 }
+
+svg {
+	height: 2em;
+	width; 2em;
+}
