@@ -40,7 +40,7 @@ article {
 	display: block;
 }
 
-p {
+article a , p {
 	text-align: center;
 }
 
