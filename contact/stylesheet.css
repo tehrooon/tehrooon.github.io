@@ -60,9 +60,11 @@ article a , p {
 
 a img { /* select all img inside a tag. or media */
 	display: inline-block;
-	width: 2rem;
-	height: 2rem:
+	/* background-color: red; */
+	position: relative;
+	top: 13vh;
+	width: 1.5rem;
+	height: 1.5rem;
 	padding: 0;
 	margin: 0;
-	background-color: red;
 }
