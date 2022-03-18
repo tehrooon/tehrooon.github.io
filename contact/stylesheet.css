@@ -46,16 +46,26 @@ article a , p {
 
 #button {
 	background-color: #151B25;
-	text-decoration: none;
+	animation-name: xenon;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 	color: white;
-	display: block;
+	text-decoration: none;
+	display: inline-block;
 	position: absolute;
 	bottom: 3vh;	
 	left: 50%;
 	margin: auto;
-	width: 80%;
+	width: 80%; 
 	padding: 3vh 3vw;
 	transform: translate(-50%);
+}
+
+@keyframes xenon {
+	0% {color; white;}
+	50% {color: gray;}
+	100% {color: white;}
 }
 
 a img { /* select all img inside a tag. or media */
