@@ -33,7 +33,7 @@ article {
 	transform: translate(-50%, -50%);
 }
 
-img {
+#amir {
 	border-radius: 50%;
 	border-width: 0.2em;
 	margin: auto;
@@ -44,7 +44,7 @@ p {
 	text-align: center;
 }
 
-a {
+#button {
 	background-color: #151B25;
 	text-decoration: none;
 	color: white;
@@ -58,7 +58,11 @@ a {
 	transform: translate(-50%);
 }
 
-svg {
-	height: 2em;
-	width; 2em;
+a img { /* select all img inside a tag. or media */
+	display: inline-block;
+	width: 2rem;
+	height: 2rem:
+	padding: 0;
+	margin: 0;
+	background-color: red;
 }
