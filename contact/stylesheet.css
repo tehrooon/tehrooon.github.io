@@ -51,37 +51,39 @@ article a , p {
 	text-align: center;
 }
 
+a img { /* select all img inside a tag. or media */
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 0;
+	margin: 0;
+}
+
+#media {
+	display: inline-block;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 0vh;
+	width: 90%;
+}
+
 #button {
 	background-color: #1E1514;
 	animation-name: xenon;
 	animation-duration: 2s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	color: white;
 	text-decoration: none;
-	display: inline-block;
-	position: absolute;
-	bottom: 3vh;	
-	left: 50%;
-	margin: auto;
-	width: 80%; 
+	color: white;
 	padding: 3vh 3vw;
-	transform: translate(-50%);
+	display: block;
+	position: static;
+	width: calc(90%-3vw);
 }
 
 @keyframes xenon {
 	0% {color; white;}
 	50% {color: gray;}
 	100% {color: white;}
-}
-
-a img { /* select all img inside a tag. or media */
-	display: inline-block;
-	/* background-color: red; */
-	position: relative;
-	top: 13vh;
-	width: 1.5rem;
-	height: 1.5rem;
-	padding: 0;
-	margin: 0;
 }
