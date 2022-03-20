@@ -27,7 +27,7 @@ body {
 article {
 	min-height: 50vh; /* change from 88vw */
 	background-color: #ECD5BB;
-	padding: 3vw 3vh;
+	padding: 3vh 3vw;
 	max-width: 720px;
 	width: 80% ; /* change from 80vw */
 	color: #000; 
