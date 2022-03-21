@@ -1,52 +1,68 @@
-/*
-colorPalette
-black #1E1514
-white #FFFFFF
-champagne #ECD5BB
-forestgreen #013A20
-*/
 html {
+	/* size */
 	height: 100%; /* changed from 100vh to 100% */
-	width: 100%; /* add */
-	max-width: 100%; /* add */
+	width: 100%; /* check */
+	max-width: 100%; /* check */
 	font-size: 100%;
 }
 
 body {
-	background-color: #013A20;
+	/* size and position */
 	min-height: 90vh !important;
+	width: 90% !important; /* important. change from 90vw */
+	margin: auto;
+	padding: 3vh 3vw; /* changed from vh vw */
+
+	/* text and font */
 	font-family: Arial;
 	font-size: 1rem;
 	line-height: 2rem;
 	-webkit-text-size-adjust: 100%;
-	padding: 3vh 3vw; /* changed from vh vw */
-	width: 90% !important; /* important. change from 90vw */
-	margin: auto;
+
+	/* color */
+	background-color: #013A20;
 }
 
+/* this page only has content on this element. */
 article {
-	min-height: 88vh;
-	background-color: #FFFFFF;
-	padding: 3vw 3vh;
-	margin: 3vh auto;
-	max-width: 720px;
+	/* size & position */
 	width: 80% ; /* change from 80vw */
-	color: #000; 
-	box-shadow: 1em 1em 1em black;
+	max-width: 720px;
+	min-height: 88vh;
+	margin: 3vh auto;
+	padding: 3vw 3vh;
+
+	/* font and text */
 	text-align: justify;
+
+	/* color */
+	background-color: #FFFFFF;
+	color: #000; 
+
+	/* shadow */
+	box-shadow: 1em 1em 1em black;
 }
 
+/* div is just a temporary element. */
 div {
-	color: #ECD5BB;
-	background-color: #1E1514;
+	/* size & position */
 	padding: 1em;
 	margin-bottom: 1em;
+
+	/* font */
 	text-align: justify;
+
+	/* color */
+	color: #ECD5BB;
+	background-color: #1E1514;
 }
 
+/* the only image is #amir. */
 img {
-	border-radius: 50%;
-	border-width: 0.2em;
+	/* size & position */
 	margin: auto;
 	display: block;
 }
+/*
+colorPalette=[black #1E1514, white: #FFFFFF, champange: #ECD5BB, forestgreen: #013A20]
+*/
