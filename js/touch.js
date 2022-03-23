@@ -4,6 +4,6 @@
 //article.innerHTML = qrCode // trigger.
 var article = document.getElementsByTagName("article")[0];
 article.addEventListener("touchstart", function(event) {
-  window.alert(event.touches)
+  window.alert(event.touches.length)
   window.alert("hello")
 }, false)
