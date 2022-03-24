@@ -3,7 +3,7 @@ var bc = article.innerHTML; // define variable bc that includes the business car
 
 // define a function to overwrites the content of article with qrCode var.
 function showQrCode() {
-	var style = "width: 10em; height: 10em; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+	var style = "width: 15%; height: 15%; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
 	var qrCode = '<img src="../media/svg/qr-code.svg" /><img id="amir" ondblclick="handleQrCode()" style="' + style + '" src="../media/amir.webp" />';
 	article.innerHTML = qrCode; // trigger.
 }
