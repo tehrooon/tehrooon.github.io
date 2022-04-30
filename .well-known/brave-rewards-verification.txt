@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: amirghassempour.github.io
-Token: 595d9df276001abb09f57de729792d5712bfb8009ec7df53c22f9f7e23fe11b2
+Token: 6517132cb304e179bb22a5ef6be405af4c18dc126f08390822864f3fdbe886e0
