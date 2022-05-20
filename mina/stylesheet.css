@@ -1,0 +1,98 @@
+html {
+	/* size */
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	font-size: 100%;
+}
+
+body {
+	/* size and position */	
+	width: 90% !important; /* important. change from 90vw */
+	min-height: 90vh !important; /* check this line again. */
+	padding: 3vh 3vw; /* changed from vh vw */
+	margin: auto;
+
+	/* color */
+	background-color: #FBE7C6; /* yellow background color */
+	
+	/* font */
+	font-family: Arial; /* font of all element of page */
+	font-size: 1rem; 
+	line-height: 2rem;
+	-webkit-text-size-adjust: 100%;
+}
+
+article { /* parent: body; sibling: none; children: img#amir hr p p#media;
+	
+	/* size and position */
+	width: 80% ; /* change from 80vw */
+	max-width: 720px; /* set min-width for bigger screens. */
+	min-height: 50vh; /* change from 88vw */
+	margin: #1E1514; /* find the best solution. */
+	padding: 3vh 3vw; /* find the right vh and vw */
+	position: absolute; /* ver & hor align. 1/4 */
+	top: 50%; /* ver & hor align. 2/4 */
+	left: 50%; /* ver & hor align. 3/4 */
+	transform: translate(-50%, -50%); /* ver & hor align. 4/4. */
+
+	/* color */
+	background-color: #FFAEBC; /* hot pink color from palette */
+	color: #1E1514; /* black color for text. */
+	text-align: justify; /* justify text. */
+
+	/* shadow */
+	box-shadow: 1em 1em 1em rgba(0,0,0,0.5);
+}
+
+#amir { /* or img#amir. first child of article. siblings: hr p p#media; */
+	
+	/* size and position */
+	margin: auto;
+	display: block;
+}
+
+article a , p { /* select all links within article and all p elemetns. */
+	text-align: center;
+}
+
+a img { /* select all img inside a elements. or .media */
+	
+	/* size & position */
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	padding: 0;
+	margin: 0;
+
+	/* animation */
+	animation-name: xenon;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/* lower part of card.
+/* select p#media. last child of article. siblings: img#amir hr p;
+children: some a.media & a#button; */
+#media {
+
+	/* size & position */
+	width: 90%;
+	display: inline-block;
+	position: fixed;
+	bottom: 2vh;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+/* define download button text animation */
+@keyframes xenon {
+	0% {--color-fill; white;}
+	50% {fill: gray;}
+	100% {fill: white;}
+}
+
+/*
+colorPalette=[ yellow ; hot pink ]
+*/
