@@ -45,9 +45,11 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	box-shadow: 1em 1em 1em rgba(0,0,0,0.5);
 }
 
-#amir { /* or img#amir. first child of article. siblings: hr p p#media; */
+#memoji { /* or img#amir. first child of article. siblings: hr p p#media; */
 	
 	/* size and position */
+	width: 9rem;
+	height: 9rem;
 	margin: auto;
 	display: block;
 }
@@ -56,7 +58,7 @@ article a , p { /* select all links within article and all p elemetns. */
 	text-align: center;
 }
 
-a img { /* select all img inside a elements. or .media */
+a i { /* select all img inside a elements. or .media */
 	
 	/* size & position */
 	display: inline-block;
@@ -88,9 +90,9 @@ children: some a.media & a#button; */
 
 /* define download button text animation */
 @keyframes xenon {
-	0% {--color-fill; white;}
-	50% {fill: gray;}
-	100% {fill: white;}
+	0% {color; white;}
+	50% {color: gray;}
+	100% {color: white;}
 }
 
 /*
