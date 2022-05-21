@@ -86,12 +86,12 @@ a { /* select all i inside a elements. or .media */
 /* lower part of card.
 /* select p#media. last child of article. siblings: img#amir hr p;
 children: some a.media & a#button; */
-#media {
+.media {
 
 	/* size & position */
-	width: 90%;
+	width: 25%;
+	background-color: red;
 	display: inline-block;
-	position: fixed;
 	bottom: 2vh;
 
 }
@@ -101,9 +101,4 @@ children: some a.media & a#button; */
 	0% {color; black;}
 	50% {color: gray;}
 	100% {color: black;}
-}
-
-@keyframes test {
-	50% {background-position: 0%}
-	100% {background-position: 100%}
 }
