@@ -91,9 +91,15 @@ children: some a.media & a#button; */
 	/* size & position */
 	width: 25%;
 	background-color: red;
-	display: inline-block;
-	bottom: 2vh;
+	margin: auto;
+	height: 20px;
+}
 
+#media {
+	background-color: yellow;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 /* define download button text animation */
