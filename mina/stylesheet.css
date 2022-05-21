@@ -60,20 +60,6 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	display: block;
 }
 
-p {
-	background-image: linear-gradient(to right, red 50%, white 50%);
-	background-size: 200% 100%;
-	background-position: 100%;
-	-webkit-background-clip: text;
-	transition: all .5s ease-out;
-	color: transparent;
-	animation-name: test;
-        animation-duration: 3s;
-        animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
-
-}
-
 article a , p { /* select all links within article and all p elemetns. */
 	text-align: center;
 }
@@ -81,14 +67,14 @@ article a , p { /* select all links within article and all p elemetns. */
 a { /* select all i inside a elements. or .media */
 	
 	/* size & position */
-	display: inline-block;
+	/*display: inline-block;*/
 	padding: 7px;
 	margin: 0;
 
 	/* text */
 	color: black;
 	text-decoration: none;
-	font-size: 7rem;
+	font-size: 3rem;
 
 	/* animation */
 	animation-name: xenon;
