@@ -8,7 +8,7 @@ html {
 
 body {
 	/* size and position */	
-	width: 90% !important; /* important. change from 90vw */
+	width: 90% !important;
 	min-height: 90vh !important; /* check this line again. */
 	padding: 3vh 3vw; /* changed from vh vw */
 	margin: auto;
@@ -29,7 +29,7 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	width: 80% ; /* change from 80vw */
 	max-width: 720px; /* set min-width for bigger screens. */
 	min-height: 50vh; /* change from 88vw */
-	margin: #1E1514; /* find the best solution. */
+	margin: auto; /* find the best solution. */
 	padding: 3vh 3vw; /* find the right vh and vw */
 	position: absolute; /* ver & hor align. 1/4 */
 	top: 50%; /* ver & hor align. 2/4 */
@@ -68,7 +68,7 @@ a { /* select all i inside a elements. or .media */
 	/* text */
 	color: black;
 	text-decoration: none;
-	font-size: 5em
+	font-size: 9rem;
 
 	/* animation */
 	animation-name: xenon;
