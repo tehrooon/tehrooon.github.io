@@ -62,13 +62,13 @@ a { /* select all i inside a elements. or .media */
 	
 	/* size & position */
 	display: inline-block;
-	padding: 0;
+	padding: 7px;
 	margin: 0;
 
 	/* text */
 	color: black;
 	text-decoration: none;
-	font-size: 9rem;
+	font-size: 7rem;
 
 	/* animation */
 	animation-name: xenon;
