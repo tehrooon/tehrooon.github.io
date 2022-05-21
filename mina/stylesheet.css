@@ -1,3 +1,9 @@
+/* color palette */
+:root {
+	--yellow: #FBE7C6;
+	--pink: #FFAEBC;
+}
+
 html {
 	/* size */
 	height: 100%;
@@ -14,7 +20,7 @@ body {
 	margin: auto;
 
 	/* color */
-	background-color: #FBE7C6; /* yellow background color */
+	background-color: var(--yellow); /* yellow background color */
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
@@ -37,7 +43,7 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	transform: translate(-50%, -50%); /* ver & hor align. 4/4. */
 
 	/* color */
-	background-color: #FFAEBC; /* hot pink color from palette */
+	background-color: var(--pink); /* hot pink color from palette */
 	color: #1E1514; /* black color for text. */
 	text-align: justify; /* justify text. */
 
@@ -112,8 +118,6 @@ children: some a.media & a#button; */
 }
 
 @keyframes test {
-	100% {background-position: 0%}
+	50% {background-position: 0%}
+	100% {background-position: 100%}
 }
-/*
-colorPalette=[ yellow ; hot pink ]
-*/
