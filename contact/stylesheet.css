@@ -1,3 +1,11 @@
+:root {
+	/* color palette */
+	--green: #013A20;
+	--black: #1E1514;
+	--yellow: #ECD5BB;
+	--white: #FFFFFF;
+}
+
 html {
 	/* size */
 	height: 100%;
@@ -14,7 +22,7 @@ body {
 	margin: auto;
 
 	/* color */
-	background-color: #013A20; /* forest green. */
+	background-color: var(--green);
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
@@ -29,7 +37,7 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	width: 80% ; /* change from 80vw */
 	max-width: 720px; /* set min-width for bigger screens. */
 	min-height: 50vh; /* change from 88vw */
-	margin: #1E1514; /* find the best solution. */
+	margin: auto; /* find the best solution. *//**/
 	padding: 3vh 3vw; /* find the right vh and vw */
 	position: absolute; /* ver & hor align. 1/4 */
 	top: 50%; /* ver & hor align. 2/4 */
@@ -37,12 +45,12 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	transform: translate(-50%, -50%); /* ver & hor align. 4/4. */
 
 	/* color */
-	background-color: #ECD5BB; /* champagne color from palette. */
-	color: #1E1514; /* black color for text. */
+	background-color: var(--yellow); /* champagne color from palette. */
+	color: var(--black); /* black color for text. */
 	text-align: justify; /* justify text. */
 
 	/* shadow */
-	box-shadow: 1em 1em 1em #1E1514;
+	box-shadow: 1em 1em 1em var(--black);
 }
 
 #amir { /* or img#amir. first child of article. siblings: hr p p#media; */
@@ -91,8 +99,8 @@ children: some a.media & a#button; */
 	position: static;
 
 	/* color */
-	background-color: #1E1514;
-	color: white;
+	background-color: var(--black);
+	color: var(--white);
 
 	/* text */
 	text-decoration: none;
@@ -110,7 +118,3 @@ children: some a.media & a#button; */
 	50% {color: gray;}
 	100% {color: white;}
 }
-
-/*
-colorPalette=[black #1E1514, white: #FFFFFF, champange: #ECD5BB, forestgreen: #013A20]
-*/
