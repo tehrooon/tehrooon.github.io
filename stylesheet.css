@@ -1,3 +1,11 @@
+:root {
+	/* color palette */
+	--green: #013A20;
+	--black: #1E1514;
+	--yellow: #ECD5BB;
+	--white: #FFFFFF;
+}
+
 html {
 	/* size */
 	height: 100%; /* changed from 100vh to 100% */
@@ -20,7 +28,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 
 	/* color */
-	background-color: #013A20;
+	background-color: --green;
 }
 
 /* this page only has content on this element. */
@@ -36,11 +44,11 @@ article {
 	text-align: justify;
 
 	/* color */
-	background-color: #FFFFFF;
-	color: #000; 
+	background-color: --white;
+	color: --black;
 
 	/* shadow */
-	box-shadow: 1em 1em 1em black;
+	box-shadow: 1em 1em 1em --black;
 }
 
 /* div is just a temporary element. */
@@ -53,8 +61,8 @@ div {
 	text-align: justify;
 
 	/* color */
-	color: #ECD5BB;
-	background-color: #1E1514;
+	color: --yellow;
+	background-color: --black;
 }
 
 /* the only image is #amir. */
