@@ -25,7 +25,7 @@ article.addEventListener("touchstart", function(event) {
 // define 3 fingers touch and functions to show and hide article.innerHTML.
 
 // add an event listener for keyboard shortcut.
-document.addEventListener("onkeyup", function(event) {
+document.addEventListener("keydown", function(event) {
 	if (event.which == 71) {
 		handleQrCode();
 	}
