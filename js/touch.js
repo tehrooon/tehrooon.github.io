@@ -26,7 +26,7 @@ article.addEventListener("touchstart", function(event) {
 
 // add an event listener for keyboard shortcut.
 document.addEventListener("onkeyup", function(event) {
-	if (event.ctrlKey) {
+	if (event.which == 71) {
 		handleQrCode();
 	}
 })
