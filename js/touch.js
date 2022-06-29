@@ -26,7 +26,7 @@ article.addEventListener("touchstart", function(event) {
 
 // add an event listener for keyboard shortcut.
 document.addEventListener("keydown", function(event) {
-	if (event.which == 81 && event.which == 82) {
+	if (event.which == 81 && event.shiftKey) {
 		handleQrCode();
 	}
 })
