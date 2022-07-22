@@ -1,0 +1,134 @@
+amir@mint:~$ date
+Fri 22 Jul 2022 11:09:51 AM BST
+amir@mint:~$ systemctl status systemd-resolved
+● systemd-resolved.service - Network Name Resolution
+     Loaded: loaded (/lib/systemd/system/systemd-resolved.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-07-21 08:04:38 BST; 1 day 3h ago
+       Docs: man:systemd-resolved.service(8)
+             https://www.freedesktop.org/wiki/Software/systemd/resolved
+             https://www.freedesktop.org/wiki/Software/systemd/writing-network-configuration-managers
+             https://www.freedesktop.org/wiki/Software/systemd/writing-resolver-clients
+   Main PID: 795 (systemd-resolve)
+     Status: "Processing requests..."
+      Tasks: 1 (limit: 14237)
+     Memory: 10.8M
+     CGroup: /system.slice/systemd-resolved.service
+             └─795 /lib/systemd/systemd-resolved
+
+Jul 21 23:00:02 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 9.9.9.9.
+Jul 21 23:00:02 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 21 23:57:44 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 21 23:57:49 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 22 06:01:55 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 22 06:02:00 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 22 10:04:15 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 9.9.9.9.
+Jul 22 10:04:20 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 22 10:04:20 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 9.9.9.9.
+Jul 22 10:04:25 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+amir@mint:~$ date && ping -c 5 router
+Fri 22 Jul 2022 11:10:23 AM BST
+PING router (192.168.1.1) 56(84) bytes of data.
+
+--- router ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4080ms
+
+    ******** AMIR : PROBLEM IS HERE *********
+
+amir@mint:~$ cat /etc/hosts | grep router
+192.168.1.1	router
+ff02::2 ip6-allrouters
+amir@mint:~$ date && ping -c 3 google.com
+Fri 22 Jul 2022 11:11:32 AM BST
+ping: google.com: Name or service not known
+amir@mint:~$ cat /etc/systemd/resolved.conf
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+#
+# Entries in this file show the compile time defaults.
+# You can change settings by editing this file.
+# Defaults can be restored by simply deleting this file.
+#
+# See resolved.conf(5) for details
+
+[Resolve]
+DNS= 9.9.9.9 149.112.112.11
+FallbackDNS= 9.9.9.11 149.112.112.10
+Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#DNSOverTLS=no
+#Cache=no-negative
+#DNSStubListener=yes
+#ReadEtcHosts=yes
+
+    ****** AMIR: TCPDUMP SHOWS PACKETS FROM 9.9.9.9 SO PROBLEM HAS GONE ********
+
+amir@mint:~$ ping -c 3 router
+PING router (192.168.1.1) 56(84) bytes of data.
+64 bytes from router (192.168.1.1): icmp_seq=1 ttl=254 time=1.01 ms
+64 bytes from router (192.168.1.1): icmp_seq=2 ttl=254 time=0.976 ms
+64 bytes from router (192.168.1.1): icmp_seq=3 ttl=254 time=0.973 ms
+
+--- router ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 0.973/0.987/1.013/0.018 ms
+amir@mint:~$ ping -c 3 google.com
+PING google.com (216.239.38.120) 56(84) bytes of data.
+64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=1 ttl=108 time=55.2 ms
+64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=2 ttl=108 time=53.1 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 2 received, 33.3333% packet loss, time 2003ms
+rtt min/avg/max/mdev = 53.139/54.153/55.168/1.014 ms
+amir@mint:~$ date && systemctl status systemd-resolved.service
+Fri 22 Jul 2022 11:13:52 AM BST
+● systemd-resolved.service - Network Name Resolution
+     Loaded: loaded (/lib/systemd/system/systemd-resolved.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-07-21 08:04:38 BST; 1 day 3h ago
+       Docs: man:systemd-resolved.service(8)
+             https://www.freedesktop.org/wiki/Software/systemd/resolved
+             https://www.freedesktop.org/wiki/Software/systemd/writing-network-configuration-managers
+             https://www.freedesktop.org/wiki/Software/systemd/writing-resolver-clients
+   Main PID: 795 (systemd-resolve)
+     Status: "Processing requests..."
+      Tasks: 1 (limit: 14237)
+     Memory: 10.8M
+     CGroup: /system.slice/systemd-resolved.service
+             └─795 /lib/systemd/systemd-resolved
+
+Jul 21 23:00:02 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 9.9.9.9.
+Jul 21 23:00:02 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 21 23:57:44 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 21 23:57:49 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 22 06:01:55 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 22 06:02:00 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+Jul 22 10:04:15 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 9.9.9.9.
+Jul 22 10:04:20 mint systemd-resolved[795]: Grace period over, resuming full feature set (UDP+EDNS0) for DNS server 1.1.1.1.
+Jul 22 10:04:20 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 9.9.9.9.
+Jul 22 10:04:25 mint systemd-resolved[795]: Using degraded feature set (UDP) for DNS server 1.1.1.1.
+amir@mint:~$ date && journalctl -S -15m
+Fri 22 Jul 2022 11:16:03 AM BST
+-- Logs begin at Sat 2022-02-19 07:22:50 GMT, end at Fri 2022-07-22 11:15:12 BST. --
+Jul 22 11:01:56 mint systemd[1363]: vte-spawn-2d7d5448-3a27-4741-8c44-c878e72d57e1.scope: Succeeded.
+Jul 22 11:01:57 mint kernel: device wlp2s0 left promiscuous mode
+Jul 22 11:01:57 mint sudo[15074]: pam_unix(sudo:session): session closed for user root
+Jul 22 11:01:58 mint systemd[1363]: vte-spawn-4a3ed357-88f5-4565-bec3-e8dedd5f92f9.scope: Succeeded.
+Jul 22 11:02:00 mint systemd[1363]: Started VTE child process 15136 launched by gnome-terminal-server process 1964.
+Jul 22 11:02:03 mint systemd[1363]: Started VTE child process 15152 launched by gnome-terminal-server process 1964.
+Jul 22 11:02:33 mint sudo[15160]:     amir : TTY=pts/2 ; PWD=/home/amir ; USER=root ; COMMAND=/usr/sbin/tcpdump -n
+Jul 22 11:02:33 mint sudo[15160]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jul 22 11:02:33 mint kernel: device wlp2s0 entered promiscuous mode
+Jul 22 11:08:51 mint kernel: device wlp2s0 left promiscuous mode
+Jul 22 11:08:51 mint sudo[15160]: pam_unix(sudo:session): session closed for user root
+Jul 22 11:09:00 mint systemd[1363]: vte-spawn-bac9e093-9e99-4d9d-950c-aad359ef68ab.scope: Succeeded.
+Jul 22 11:09:47 mint sudo[15207]:     amir : TTY=pts/2 ; PWD=/home/amir ; USER=root ; COMMAND=/usr/sbin/tcpdump -n
+Jul 22 11:09:47 mint sudo[15207]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jul 22 11:09:47 mint kernel: device wlp2s0 entered promiscuous mode
+Jul 22 11:15:12 mint kernel: device wlp2s0 left promiscuous mode
+Jul 22 11:15:12 mint sudo[15207]: pam_unix(sudo:session): session closed for user root
+amir@mint:~$

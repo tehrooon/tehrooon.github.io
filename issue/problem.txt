@@ -1,0 +1,13 @@
+in my lab I have two hosts and a router
+router: 802.11 b+g+n
+host1: macos
+host2: mint
+
+I always have had problem with pinging devices on my local area network. for example I was on macos and at some point I could ping mint and some minutes later I couldn't
+finally I figured out if I make my arp tables on both hosts I can ping between two hosts without issue and connectivity between them would be nice.
+I have no problem between hosts and on macos now but on mint I still have the problem bellow:
+at some points of time I cant ping my router or anything outside. nmcli shows i am still connected to router. but I cant ping router or google. ( I can ping other host )
+if I try to ping again and again OR do $(nmcli c down router && nmcli c up router) the connection would be nice until the next time at which the issue occurs.
+
+when I read english I think my english is ok but when I want to write I understand it's aweful.
+I am sorry if I can't be as clear as I should.
