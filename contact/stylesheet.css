@@ -86,21 +86,6 @@ children: some a.media & a#button; */
 	bottom: 0vh;
 	left: 50%;
 	transform: translate(-50%);
-}
-
-/* downlaod button */
-/* lastchild of p#media. siblings: some a.media */
-#button {
-	
-	/* size & position */
-	width: calc(90%-3vw);
-	padding: 3vh 3vw;
-	display: block;
-	position: static;
-
-	/* color */
-	background-color: var(--black);
-	color: var(--white);
 
 	/* text */
 	text-decoration: none;
