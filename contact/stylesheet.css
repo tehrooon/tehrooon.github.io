@@ -1,9 +1,9 @@
 :root {
 	/* color palette */
-	--green: #013A20;
-	--black: #1E1514;
-	--yellow: #ECD5BB;
-	--white: #FFFFFF;
+	--black: #111111;
+	--white: #EEEEEE;
+	--background: #222222;
+	--cardbg: #DDDDDD;
 }
 
 html {
@@ -22,7 +22,7 @@ body {
 	margin: auto;
 
 	/* color */
-	background-color: var(--green);
+	background-color: var(--background);
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
@@ -45,7 +45,7 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	transform: translate(-50%, -50%); /* ver & hor align. 4/4. */
 
 	/* color */
-	background-color: var(--yellow); /* champagne color from palette. */
+	background-color: var(--cardbg); /* card-background color from palette. */
 	color: var(--black); /* black color for text. */
 	text-align: justify; /* justify text. */
 
@@ -68,38 +68,27 @@ a img { /* select all img inside a elements. or .media */
 	
 	/* size & position */
 	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 2rem;
+	height: 2rem;
 	padding: 0;
-	margin: 0;
+	margin: 0.5rem;
+}
+
+#gpg {
+	font-size: 0.75rem;
 }
 
 /* lower part of card.
 /* select p#media. last child of article. siblings: img#amir hr p;
 children: some a.media & a#button; */
 #media {
-
 	/* size & position */
-	width: 90%;
 	display: inline-block;
 	position: fixed;
-	bottom: 0vh;
 	left: 50%;
+	bottom: 0vh;
 	transform: translate(-50%);
 
 	/* text */
 	text-decoration: none;
-
-	/* animation */
-	animation-name: xenon;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-}
-
-/* define download button text animation */
-@keyframes xenon {
-	0% {color; white;}
-	50% {color: gray;}
-	100% {color: white;}
 }

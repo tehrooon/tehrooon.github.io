@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en"> <!-- lang is important for devices with different language settings. -->
 	<head>
-		<title>contact|amir</title> <!-- page title -->
+		<title>amir | contact</title> <!-- page title -->
 		<meta name="viewport" content="width=device-width"> <!-- content must be "," separated. initial-scale=1 -->
 		<meta name="description" content="contact amir.">
 		<link rel="stylesheet" href="./stylesheet.css"> <!-- linking the stylesheet -->
@@ -11,15 +11,15 @@
 	<body>
 		<article> <!-- there is just an article on this page. -->
 			<img id="amir" ondblclick="handleQrCode()" src="../media/amir.webp" alt="amir" height="100" width="100">
-			<hr color="#1E1514" /> <!-- a horizontal line after img and before the main -->
+			<hr color="#111111" /> <!-- a horizontal line after img and before the main -->
 			<p> amir <br />
 			self-educator & tech enthusiast <br />
-			C182 6531 F0F3 1229 1A46 1373 479E C0B4 C6FD 024B
+			<span id="gpg">C182 6531 F0F3 1229 1A46 1373 479E C0B4 C6FD 024B</span>
 			</p>
 			<p id="media">
 				<!-- twitter svg and link -->
 				<a class="media" href="https://twitter.com/theamirghs" target="_blank">
-					<img src="../media/svg/twitter-square-brands.svg" alt="twitter" /></a>
+					<img src="../media/svg/twitter.svg" alt="twitter" /></a>
 				<!-- mail svg within link  -->
 				<a class="media" href="mailto:theamir@tutanota.com" target="_blank">
 					<img src="../media/svg/envelope-solid.svg" alt="mail" /></a>
@@ -28,7 +28,7 @@
 					<img src="../media/svg/id-card-solid.svg" alt="vcard" /></a>
 				<!-- github svg within link -->
 				<a class="media" href="https://github.com/amirGhassempour" target="_blank">
-					<img src="../media/svg/github-square-brands.svg" alt="github" /></a>
+					<img src="../media/svg/github.svg" alt="github" /></a>
 			</p>
 		</article>
 		<script src="../js/qr-code.js"></script>
