@@ -34,9 +34,10 @@ body {
 article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	
 	/* size and position */
-	width: 80% ; /* change from 80vw */
-	max-width: 720px; /* set min-width for bigger screens. */
-	min-height: 50vh; /* change from 88vw */
+	width: 80vw; /* change from 80vw */
+	max-width: 90vh; /* set min-width for bigger screens. */
+	height: 50vh; /* change from 88vw */
+	max-height: 50vw;
 	margin: auto; /* find the best solution. *//**/
 	padding: 3vh 3vw; /* find the right vh and vw */
 	position: absolute; /* ver & hor align. 1/4 */
