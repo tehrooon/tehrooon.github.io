@@ -26,8 +26,8 @@ body {
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
-	font-size: 1vw; 
-	line-height: 2vw;
+	font-size: 1rem; 
+	line-height: 2rem;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -56,6 +56,8 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 #amir { /* or img#amir. first child of article. siblings: hr p p#media; */
 	
 	/* size and position */
+	width: 5vw;
+	height: 5vw;
 	margin: auto;
 	display: block;
 }
