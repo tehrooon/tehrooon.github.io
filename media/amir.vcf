@@ -1,33 +1,24 @@
 BEGIN:VCARD
 VERSION:3.0
 PRODID:-//Apple Inc.//macOS 12.2.1//EN
-N:;Amir;;;
-FN:Amir
-ORG:aGh;
+N:;amir;;;
+FN:amir
 TITLE:Technology Enthusiast
-EMAIL;type=INTERNET;type=WORK;type=pref:theamirghs@protonmail.com
-ADR;type=HOME;type=pref:;;Derakhti;Tehran;;1468734771;Middle East
-item1.URL;type=pref:https://amirghassempour.github.io
+EMAIL;type=INTERNET;type=WORK;type=pref:theamir@tutanota.com
+item1.URL;type=pref:https://suamir.github.io
 item1.X-ABLabel:_$!<HomePage>!$_
-item2.URL:https://github.com/amirGhassempour
+item2.URL:https://github.com/suamir
 item2.X-ABLabel:github
-item3.URL:https://t.me/amirghassempour
+item3.URL:https://t.me/su_amir
 item3.X-ABLabel:telegram
 item4.URL:https://instagram.com/amirrrghs/
 item4.X-ABLabel:instagram
 item5.URL:https://sololearn.com/profile/23576434/
 item5.X-ABLabel:sololearn
-item6.URL:https://www.duolingo.com/profile/AmirGhassempour
+item6.URL:https://www.duolingo.com/profile/su_amir
 item6.X-ABLabel:duolingo
-item7.URL:https://youtube.com/channel/UCZf1jZKz0bDRufJMcaKdhrg
-item7.X-ABLabel:youtube
-item8.URL:https://facebook.com/profile.php?id=100079620782836
-item8.X-ABLabel:facebook
-item9.URL:https://twitter.com/theamirghs
+item9.URL:https://twitter.com/_______amir__
 item9.X-ABLabel:twitter
-item10.URL:https://wa.me/982188374320
-item10.X-ABLabel:whatsapp
-BDAY:1995-01-09
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAA
  AAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABpaADAAQAAAABAA
  ABpQAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCy
