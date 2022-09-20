@@ -26,8 +26,8 @@ body {
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
-	font-size: 1rem; 
-	line-height: 2rem;
+	font-size: 1vw; 
+	line-height: 2vw;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -68,14 +68,14 @@ a img { /* select all img inside a elements. or .media */
 	
 	/* size & position */
 	display: inline-block;
-	width: 2rem;
-	height: 2rem;
+	width: 2vw;
+	height: 2vw;
 	padding: 0;
-	margin: 0.5rem;
+	margin: 1vw;
 }
 
 #gpg {
-	font-size: 0.75rem;
+	font-size: 1vw;
 }
 
 /* lower part of card.
