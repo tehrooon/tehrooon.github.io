@@ -58,6 +58,8 @@ article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	/* size and position */
 	width: 5vw;
 	height: 5vw;
+	min-width: 2rem;
+	min-height: 2rem;
 	margin: auto;
 	display: block;
 }
@@ -71,13 +73,15 @@ a img { /* select all img inside a elements. or .media */
 	/* size & position */
 	display: inline-block;
 	width: 2vw;
+	min-width: 1rem;
 	height: 2vw;
+	min-height: 1rem;
 	padding: 0;
 	margin: 1vw;
 }
 
 #gpg {
-	font-size: 1vw;
+	font-size: calc(0.5rem + 0.5vw);
 }
 
 /* lower part of card.
