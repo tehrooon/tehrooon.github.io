@@ -1,6 +1,6 @@
 :root {
 	/* color palette */
-	--black: #111111;
+	--black: #000000;
 	--white: #EEEEEE;
 	--background: #222222;
 	--paperbg: #DDDDDD;
@@ -29,14 +29,15 @@ body {
 
 	/* color */
 	background-color: var(--background);
+	background-image: url(media/svg/pattern.svg);
+	background-size: 10vw 10vw;
 }
 
 /* this page only has content on this element. */
 article {
 	/* size & position */
-	width: 80% ; /* change from 80vw */
-	max-width: 720px;
-	min-height: 88vh;
+	width: 80%; /* change from 80vw */
+	min-height: 70vh;
 	margin: 3vh auto;
 	padding: 3vw 3vh;
 
@@ -44,11 +45,8 @@ article {
 	text-align: justify;
 
 	/* color */
-	background-color: var(--paperbg);
-	color: var(--black);
-
-	/* shadow */
-	box-shadow: 1em 1em 1em var(--black);
+	background-color: var(--black);
+	color: var(--white);
 }
 
 /* the only image is #amir. */
@@ -56,4 +54,16 @@ img {
 	/* size & position */
 	margin: auto;
 	display: block;
+	height: 10vw;
+	width: 10vw;
+}
+
+div {
+	background-color: var(--white);
+	color: red;
+	padding: 5px;
+	margin: auto;
+	max-width: 250px;
+	border-radius: 50vh;
+	text-align: center;
 }
