@@ -29,6 +29,8 @@ body {
 
 	/* color */
 	background-color: var(--background);
+	background-image: url(../media/svg/pattern.svg);
+	background-size: 10vw 10vw;
 }
 
 /* this page only has content on this element. */

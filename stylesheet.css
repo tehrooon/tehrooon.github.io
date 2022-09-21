@@ -1,9 +1,9 @@
 :root {
 	/* color palette */
-	--green: #013A20;
-	--black: #1E1514;
-	--yellow: #ECD5BB;
-	--white: #FFFFFF;
+	--black: #111111;
+	--white: #EEEEEE;
+	--background: #222222;
+	--paperbg: #DDDDDD;
 }
 
 html {
@@ -28,7 +28,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 
 	/* color */
-	background-color: var(--green);
+	background-color: var(--background);
 }
 
 /* this page only has content on this element. */
@@ -44,25 +44,11 @@ article {
 	text-align: justify;
 
 	/* color */
-	background-color: var(--white);
+	background-color: var(--paperbg);
 	color: var(--black);
 
 	/* shadow */
 	box-shadow: 1em 1em 1em var(--black);
-}
-
-/* div is just a temporary element. */
-div {
-	/* size & position */
-	padding: 1em;
-	margin-bottom: 1em;
-
-	/* font */
-	text-align: justify;
-
-	/* color */
-	color: var(--yellow);
-	background-color: var(--black);
 }
 
 /* the only image is #amir. */
@@ -71,6 +57,3 @@ img {
 	margin: auto;
 	display: block;
 }
-/*
-colorPalette=[black #1E1514, white: #FFFFFF, champange: #ECD5BB, forestgreen: #013A20]
-*/
