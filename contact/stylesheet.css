@@ -23,6 +23,8 @@ body {
 
 	/* color */
 	background-color: var(--background);
+	background-image: url(../media/svg/pattern.svg);
+	background-size: 10vw 10vw;
 	
 	/* font */
 	font-family: Arial; /* font of all element of page */
@@ -34,10 +36,10 @@ body {
 article { /* parent: body; sibling: none; children: img#amir hr p p#media;
 	
 	/* size and position */
-	width: 70vw; /* change from 80vw */
-	max-width: 90vh; /* set min-width for bigger screens. */
-	height: 50vh; /* change from 88vw */
-	max-height: 60vw;
+	width: 80%; /* change from 80vw */
+	max-width: 720px;
+	min-height: 50vh;
+	max-height: 720px;
 	margin: auto; /* find the best solution. *//**/
 	padding: 3vh 3vw; /* find the right vh and vw */
 	position: absolute; /* ver & hor align. 1/4 */
