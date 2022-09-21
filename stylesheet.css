@@ -22,7 +22,7 @@ body {
 	padding: 3vh 3vw; /* changed from vh vw */
 
 	/* text and font */
-	font-family: Arial;
+	font-family: 'Courier New', monospace;
 	font-size: 1rem;
 	line-height: 2rem;
 	-webkit-text-size-adjust: 100%;
@@ -52,7 +52,7 @@ article {
 /* the only image is #amir. */
 img {
 	/* size & position */
-	margin: auto;
+	margin: 10vh auto;
 	display: block;
 	height: 10vw;
 	width: 10vw;
@@ -62,8 +62,10 @@ div {
 	background-color: var(--white);
 	color: red;
 	padding: 5px;
-	margin: auto;
-	max-width: 250px;
+	margin: 10vh auto;
+	width: 15vw;
+	max-width: 20vw;
 	border-radius: 50vh;
 	text-align: center;
+	font-size: 3vw;
 }
