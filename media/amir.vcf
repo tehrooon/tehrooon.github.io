@@ -3,21 +3,19 @@ VERSION:3.0
 PRODID:-//Apple Inc.//macOS 12.2.1//EN
 N:;amir;;;
 FN:amir
-TITLE:Technology Enthusiast
-EMAIL;type=INTERNET;type=WORK;type=pref:theamir@tutanota.com
-item1.URL;type=pref:https://suamir.github.io
+TITLE:self-educator & tech enthusiast
+EMAIL;type=INTERNET;type=WORK;type=pref:0x411112@skiff.com
+item1.URL;type=pref:https://411112.github.io
 item1.X-ABLabel:_$!<HomePage>!$_
-item2.URL:https://github.com/suamir
+item2.URL:https://github.com/411112
 item2.X-ABLabel:github
 item3.URL:https://t.me/su_amir
 item3.X-ABLabel:telegram
-item4.URL:https://instagram.com/amirrrghs/
-item4.X-ABLabel:instagram
 item5.URL:https://sololearn.com/profile/23576434/
 item5.X-ABLabel:sololearn
 item6.URL:https://www.duolingo.com/profile/su_amir
 item6.X-ABLabel:duolingo
-item9.URL:https://twitter.com/_______amir__
+item9.URL:https://twitter.com/0x411112
 item9.X-ABLabel:twitter
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAA
  AAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABpaADAAQAAAABAA
