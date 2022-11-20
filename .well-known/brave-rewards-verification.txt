@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
-Domain: suamir.github.io
-Token: b4ce39641b6233e1caf027f20d37613d67e0c29bef101829365f663e238a4087
+Domain: 411112.github.io
+Token: 8990d8aacd7bde77d7feld9692678f733f8067158785alc6aee60ef4855cele5
