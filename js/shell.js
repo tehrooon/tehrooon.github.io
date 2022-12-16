@@ -1,21 +1,22 @@
 const commands = [
 	["guest", "logged in as guest"],
 	["whoami", "amir"],
-	["exho mail", "4mi2@proton.me"],
-	["echo eth", "0x411112"]
+	["gpg -k", 'my pgp public key:<br />rsa4096 <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/C1826531F0F312291A461373479EC0B4C6FD024B">C1826531F0F312291A461373479EC0B4C5FD024B</a>'],
+	["echo $mailAddresses", "theamir@tutanota.com<br />4mi2@proton.me<br />please send mail from the same mail service."],
+	["echo $blockchainAddresses", "ETH: <br />SOL: "]
 ];
 
 var scr = document.getElementById("screen")
-var speed = 50;
-var login = 'login: ';
-var ps1 = 'amir@github.io:~$ ';
-
+var speed = 70;
+var login = 'github.io login: ';
+//var ps1 = 'amir@github.io:~$ ';
+var ps1 = '$ ';
 
 async function user(t) {
 	let yourPromise = new Promise(function(yourResolve) {
 		let i = 0;
 		var input = commands[t][0];
-		var output = commands[t][1];
+		var output = commands[t][1] + " ";
 		async function typeWriter() {
 			let myPromise = new Promise(function(myResolve) {
 				if (i < input.length) {
@@ -39,4 +40,10 @@ async function user(t) {
 
 
 scr.innerHTML += "<br />" + login;
-user(0).then(function(value) {user(1).then(function(value) {user(2);});});
+var n = 0;
+function shell() {
+	if (n < commands.length) {
+		user(n).then(function(value) {n++; setTimeout(shell, speed)});
+}
+}
+shell();

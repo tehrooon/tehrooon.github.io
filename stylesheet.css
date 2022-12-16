@@ -24,13 +24,17 @@ body {
 	/* text and font */
 	font-family: 'Courier New', monospace;
 	font-size: 1rem;
-	line-height: 2rem;
+	line-height: 1.5rem;
 	-webkit-text-size-adjust: 100%;
 
 	/* color */
 	background-color: var(--background);
 	background-image: url(media/svg/pattern.svg);
 	background-size: 10vw 10vw;
+}
+
+pre {
+	line-height: 1rem;
 }
 
 /* this page only has content on this element. */
@@ -41,12 +45,18 @@ article {
 	margin: 3vh auto;
 	padding: 3vw 3vh;
 
+	overflow: hidden; /* not working now */
+
 	/* font and text */
 	text-align: justify;
 
 	/* color */
 	background-color: var(--black);
 	color: var(--white);
+}
+
+#screen {
+	overflow: hidden;
 }
 
 /* the only image is #amir. */
