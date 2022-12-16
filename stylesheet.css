@@ -33,10 +33,6 @@ body {
 	background-size: 10vw 10vw;
 }
 
-pre {
-	line-height: 1rem;
-}
-
 /* this page only has content on this element. */
 article {
 	/* size & position */
@@ -44,14 +40,22 @@ article {
 	min-height: 70vh;
 	max-height: 70vh;
 	margin: 3vh auto;
-	padding: 3vw 3vh;
+	padding: 1vw 1vh; /* default 3vw 3vh */
 
 	overflow: scroll; /* not working now */
 
 	/* font and text */
 	text-align: justify;
+	/* white-space: pre; /* added to act like pre tag */
 
 	/* color */
 	background-color: var(--black);
 	color: var(--white);
 }
+
+/*
+pre {
+	line-height: 1rem;
+	display: inline-block;
+}
+*/
