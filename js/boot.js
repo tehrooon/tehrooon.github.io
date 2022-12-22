@@ -4,9 +4,9 @@ window.onload = function boot() {
 	int i = 0;
 	function load() {
 		if (i%2 = 0) {
-			document.getElementById('scr') = _char;
+			document.getElementById('screen') = _char;
 		} else {
-			document.getElementById('scr') = '';
+			document.getElementById('screen') = '';
 		}
 		setTimeout(load, loadSpeed);
 	}
