@@ -1,5 +1,6 @@
 var scr = document.getElementById("screen")
 var speed = 90;
+var linebreak = "<br />";
 var login = "login: ";
 var ps1 = '~$ ';
 
@@ -21,15 +22,15 @@ async function user(t) {
 			});
 			if (t==0) {
 				scr.innerHTML = await myPromise;
-				scr.innerHTML += "<br />" + await yourPromise;
+				scr.innerHTML += linebreak + await yourPromise;
 			} else {
-				scr.innerHTML += "<br />" + await myPromise;
-				scr.innerHTML += "<br />" + await yourPromise;
+				scr.innerHTML += linebreak + await myPromise;
+				scr.innerHTML += linebreak + await yourPromise;
 			}
 		};
 		typeWriter();
 	});
-	scr.innerHTML += "<br />" + await yourPromise; // I dont understand this line.
+	scr.innerHTML += linebreak + await yourPromise; // I dont understand this line.
 }
 
 // start
