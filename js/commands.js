@@ -1,4 +1,5 @@
 const commands = [
+	["amir", "logged in as amir."],
 	["whoami", "amir<br />self-educator & tech enthusiast."],
 	["more", "experiencer;<br />doc reader;<br />learner;<br />coder;<br />network & system admin."],
 	["echo $mailAddresses", "theamir@tutanota.com<br />4mi2@proton.me<br />0x411112@skiff.com<br />please send mail from the same mail service."],
