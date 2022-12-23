@@ -8,16 +8,16 @@ async function commander(t) {
 	var input = commands[t][0];
 	var output = commands[t][1];
 	let i = 0;
-	let newLine = new Promise(allDone => {
+	let newLine = new Promise(resolve => {
 		async function typer() {
-			let outPut = new Promise(hitEnter => {
+			let outPut = new Promise(resolve => {
 				async function stroke() {
 					scr.innerHTML += input.charAt(i);
 				}
 				if (i < input.length) {
 					stroke().then(function(value) {i++, setTimeout(typer, speed);});
 				} else if (i == input.length) {
-					hitEnter(output)
+					resolve(output)
 				};
 			});
 			// login
@@ -26,12 +26,12 @@ async function commander(t) {
 			} else {
 				scr.innerHTML += linebreak + await outPut;
 			}
-			allDone(ps1);
-			scr.innerHTML += linebreak + await newLine; // these two lines are not understadable; this line runs. but why?
+			resolve(ps1);
+			scr.innerHTML += linebreak + await newLine; // #3 not understadable; if here this line runs. if not here types to the end and then first letter
 		};
 		typer()
 	});
-	scr.innerHTML += linebreak + await newLine; // I dont understand this line. if not here typing will mixed.
+	scr.innerHTML += linebreak + await newLine; // #3 not understadable. if not here typing will be mixed. but Why?
 }
 
 // start
