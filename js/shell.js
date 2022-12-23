@@ -1,5 +1,5 @@
 var scr = document.getElementById("screen")
-var speed = 90;
+var speed = 100;
 var linebreak = "<br />";
 var login = "login: ";
 var ps1 = '~$ ';
@@ -9,12 +9,13 @@ async function commander(t) {
 	var output = commands[t][1];
 	let i = 0;
 	let newLine = new Promise(allDone => {
-		async function typeWriter() {
+		async function typer() {
 			let outPut = new Promise(hitEnter => {
-				if (i < input.length) {
+				async function stroke() {
 					scr.innerHTML += input.charAt(i);
-					i++;
-					setTimeout(typeWriter, speed);
+				}
+				if (i < input.length) {
+					stroke().then(function(value) {i++, setTimeout(typer, speed);});
 				} else if (i == input.length) {
 					hitEnter(output)
 				};
@@ -26,9 +27,9 @@ async function commander(t) {
 				scr.innerHTML += linebreak + await outPut;
 			}
 			allDone(ps1);
-			scr.innerHTML += linebreak + await newLine; // this line runs. but why?
+			scr.innerHTML += linebreak + await newLine; // these two lines are not understadable; this line runs. but why?
 		};
-		typeWriter();
+		typer()
 	});
 	scr.innerHTML += linebreak + await newLine; // I dont understand this line. if not here typing will mixed.
 }
