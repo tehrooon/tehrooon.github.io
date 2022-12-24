@@ -46,16 +46,24 @@ article {
 
 	/* font and text */
 	text-align: justify;
-	/* white-space: pre; /* added to act like pre tag */
+	/*white-space: pre; /* added to act like pre tag */
 
 	/* color */
 	background-color: var(--black);
 	color: var(--white);
 }
 
-/*
 pre {
-	line-height: 1rem;
+	/* size and position */
 	display: inline-block;
+
+	/* text and font */
+	line-height: 1rem;
+
+	/* color */
+	color: #411112;
 }
-*/
+
+.red {
+	color: #FF0000;
+}
