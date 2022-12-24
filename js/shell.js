@@ -1,35 +1,37 @@
 var scr = document.getElementById("screen")
-var speed = 90;
+var speed = 100;
+var linebreak = "<br />";
 var login = "login: ";
 var ps1 = '~$ ';
 
-async function user(t) {
-	let yourPromise = new Promise(function(yourResolve) {
-		let i = 0;
-		var input = commands[t][0];
-		var output = commands[t][1];
-		async function typeWriter() {
-			let myPromise = new Promise(function(myResolve) {
-				if (i < input.length) {
+async function commander(t) {
+	var input = commands[t][0];
+	var output = commands[t][1];
+	let i = 0;
+	let newLine = new Promise(resolve => {
+		async function typer() {
+			let outPut = new Promise(resolve => {
+				async function stroke() {
 					scr.innerHTML += input.charAt(i);
-					i++;
-					setTimeout(typeWriter, speed);
+				}
+				if (i < input.length) {
+					stroke().then(function(value) {i++, setTimeout(typer, speed);});
 				} else if (i == input.length) {
-					myResolve(output)
-					yourResolve(ps1);
+					resolve(output)
 				};
 			});
+			// login
 			if (t==0) {
-				scr.innerHTML = await myPromise;
-				scr.innerHTML += "<br />" + await yourPromise;
+				scr.innerHTML = await outPut;
 			} else {
-				scr.innerHTML += "<br />" + await myPromise;
-				scr.innerHTML += "<br />" + await yourPromise;
+				scr.innerHTML += linebreak + await outPut;
 			}
+			resolve(ps1);
+			scr.innerHTML += linebreak + await newLine; // #3 not understadable; if here this line runs. if not here types to the end and then first letter
 		};
-		typeWriter();
+		typer()
 	});
-	scr.innerHTML += "<br />" + await yourPromise; // I dont understand this line.
+	scr.innerHTML += linebreak + await newLine; // #3 not understadable. if not here typing will be mixed. but Why?
 }
 
 // start
@@ -37,7 +39,7 @@ scr.innerHTML = login;
 var n = 0;
 function shell() {
 	if (n < commands.length) {
-		user(n).then(function(value) {n++; setTimeout(shell, speed)});
+		commander(n).then(function(value) {n++; setTimeout(shell, speed)});
 	}
 }
 shell();
