@@ -2,8 +2,7 @@ var scr = document.getElementById("screen")
 var speed = 100;
 var linebreak = "<br />";
 var login = "login: ";
-var ps1 = '~$ ';
-
+var ps1 = `<span style="color: yellow;"> ~ $ </span>`;
 async function commander(t) {
 	var input = commands[t][0];
 	var output = commands[t][1];
@@ -24,7 +23,7 @@ async function commander(t) {
 			if (t==0) {
 				scr.innerHTML = await outPut;
 			} else {
-				scr.innerHTML += linebreak + await outPut;
+				scr.innerHTML += linebreak + '<span class="green">' + await outPut + '</span>';
 			}
 			resolve(ps1);
 			scr.innerHTML += linebreak + await newLine; // #3 not understadable; if here this line runs. if not here types to the end and then first letter
