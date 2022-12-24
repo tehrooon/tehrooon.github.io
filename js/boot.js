@@ -1,14 +1,17 @@
-window.onload = function boot() {
-	char _char = "_";
-	int loadSpeed = 90;
-	int i = 0;
+int i = 0;
+char _char = "_";
+int loadSpeed = 90;
+
+window.onload = boot => {
 	function load() {
-		if (i%2 = 0) {
+		if (i == 0) {
 			document.getElementById('screen') = _char;
-		} else {
+			i = 1;
+		} else if (i == 1) {
 			document.getElementById('screen') = '';
-		}
+			i = 0;
+		};
 		setTimeout(load, loadSpeed);
-	}
+	};
 	load();
 }
