@@ -1,2 +1,1 @@
-I will never use custom domain for this page.
-I will never close the source code.
+as you know this is my webpage repo. nothing special.
