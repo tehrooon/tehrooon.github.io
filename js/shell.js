@@ -1,4 +1,4 @@
-var scr = document.getElementById("screen")
+var scr = document.getElementById("screen");
 var speed = 100;
 var linebreak = "<br />";
 var login = "login: ";
@@ -27,6 +27,7 @@ async function commander(t) {
 			}
 			resolve(ps1);
 			scr.innerHTML += linebreak + await newLine; // #3 not understadable; if here this line runs. if not here types to the end and then first letter
+			scr.scrollIntoView({block: "end"}); // auto scroll
 		};
 		typer()
 	});
