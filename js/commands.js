@@ -1,5 +1,5 @@
 const commands = [
-	["amir", `<pre>                       d8b         
+	["guest", `<pre>                       d8b         
                        <span class="red">qop</span>        
  8888b.  88888b.d88b.  888 888d888 
     "88b 888 "888 "88b 888 888P"   
