@@ -39,10 +39,10 @@ article {
 	width: 80%; /* change from 80vw */
 	min-height: 70vh;
 	max-height: 70vh;
-	margin: 3vh auto;
+	margin: 1vh auto;
 	padding: 1vw 1vh; /* default 3vw 3vh */
 
-	overflow: scroll; /* not working now */
+	overflow: scroll;
 
 	/* font and text */
 	text-align: justify;
@@ -56,6 +56,10 @@ article {
 a {
 	color: green;
 	white-space: pre;
+}
+
+p {
+	margin-top: 0em;
 }
 
 pre {
