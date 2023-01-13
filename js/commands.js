@@ -1,13 +1,19 @@
-const commands = [
-	["amir", `<pre>                       d8b         
+const date = new Date();
+let year = date.getFullYear();
+let yearsAgo = year - 5;
+
+const asciiArt = `<pre>                       d8b         
                        <span class="red">qop</span>        
  8888b.  88888b.d88b.  888 888d888 
     "88b 888 "888 "88b 888 888P"   
 .d888888 888  888  888 888 888     
 888  888 888  888  888 888 888     
-"Y888888 888  888  888 888 888     <span class="red">2017-2022</span>
+"Y888888 888  888  888 888 888     <span class="red">${yearsAgo}-${year}</span>
 _______________________Y8Y___________________
-<span class="red">________________________Y</span>_____________________</pre>`],
+<span class="red">________________________Y</span>_____________________</pre>`
+
+const commands = [
+	["amir", asciiArt],
 	["whoami", "amir<br />self-educator & tech enthusiast."],
 	["more aboutMe", "experiencer;<br />doc reader;<br />learner;<br />coder;<br />network & system admin."],
 	["addresses mail --all", "theamir@tutanota.com<br />4mi2@proton.me<br />0x411112@skiff.com<br />please send mail from the same mail service."],
